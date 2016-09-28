@@ -1,0 +1,359 @@
+Data Management and Visualization
+
+Assignment – Week 2
+Running Your First Program
+By mapolarbear@gmail.com
+
+
+First,  I would like to remind that for my research  I decided to  use GAPMINDER data set,  containing some indicators, but not all needed to  complete my  research. To build extended version with more data, I downloaded and uploaded into SAS Studio additional CSV data file and added needed variables to GAPMINDER. Data from following CSV files/datasets added for the purpose of my research using PROC SQL in Part-2 of program, don’t be scared.
+
+Here is brief description of code:
+Part-1	- Retrieve GAPMINDER form provided MYDATA course data
+Part-2 	- Join/Add needed variables/data from downloaded www.gapminder.org site
+Part-3	- Creation of final GAPMINDER_RSCH dataset with needed labels in corresponding formats 
+Part-4	- Execution of PROC FEQ to display frequencies for couple variables, including missing values.
+
+Program code can also be found in TXT format at following link:
+https://github.com/mapolarbear/Data-Analysis-Interpretation-Wesleyan-SAS/blob/master/gapbuildDS.txt
+
+For verification purposes there are originally 213 countries in GAPMINDER dataset and if you add Cumulative Frequency to Missing Freq., you will get same 213, means nothing is skipped or removed. 
+In addition, based on my preliminary analysis of data I noticed that data is missing some countries, which means that my samples will be smaller than expected. I also noticed that some countries has higher suicideper100TH rating, it will be interesting to see if suicideper100TH correlates with employrate and long term  unemployment ratings for each category
+
+1. Output of program
+
+Employment Rate %
+employrate	Frequency	Percent	Cumulative
+Frequency	Cumulative
+Percent
+32	1	0.56	1	0.56
+35	1	0.56	2	1.12
+37	1	0.56	3	1.69
+39	2	1.12	5	2.81
+40	1	0.56	6	3.37
+41	2	1.12	8	4.49
+42	4	2.25	12	6.74
+43	3	1.69	15	8.43
+44	2	1.12	17	9.55
+45	2	1.12	19	10.67
+46	5	2.81	24	13.48
+47	6	3.37	30	16.85
+48	1	0.56	31	17.42
+49	4	2.25	35	19.66
+50	2	1.12	37	20.79
+51	10	5.62	47	26.40
+52	1	0.56	48	26.97
+53	5	2.81	53	29.78
+54	4	2.25	57	32.02
+55	5	2.81	62	34.83
+56	10	5.62	72	40.45
+57	7	3.93	79	44.38
+58	8	4.49	87	48.88
+59	12	6.74	99	55.62
+60	7	3.93	106	59.55
+61	6	3.37	112	62.92
+62	7	3.93	119	66.85
+63	3	1.69	122	68.54
+64	8	4.49	130	73.03
+65	7	3.93	137	76.97
+66	6	3.37	143	80.34
+67	4	2.25	147	82.58
+68	3	1.69	150	84.27
+69	1	0.56	151	84.83
+70	2	1.12	153	85.96
+71	2	1.12	155	87.08
+72	4	2.25	159	89.33
+73	3	1.69	162	91.01
+74	1	0.56	163	91.57
+75	2	1.12	165	92.70
+76	2	1.12	167	93.82
+77	1	0.56	168	94.38
+78	2	1.12	170	95.51
+79	1	0.56	171	96.07
+80	1	0.56	172	96.63
+81	2	1.12	174	97.75
+82	1	0.56	175	98.31
+83	3	1.69	178	100.00
+Frequency Missing = 35
+
+
+Suicide Rating Per 100,000 %
+suicideper100th	Frequency	Percent	Cumulative
+Frequency	Cumulative
+Percent
+.2	1	0.52	1	0.52
+.5	1	0.52	2	1.05
+1	4	2.09	6	3.14
+2	10	5.24	16	8.38
+3	6	3.14	22	11.52
+4	14	7.33	36	18.85
+5	15	7.85	51	26.70
+6	18	9.42	69	36.13
+7	11	5.76	80	41.88
+8	18	9.42	98	51.31
+9	8	4.19	106	55.50
+10	17	8.90	123	64.40
+11	10	5.24	133	69.63
+12	13	6.81	146	76.44
+13	6	3.14	152	79.58
+14	6	3.14	158	82.72
+15	7	3.66	165	86.39
+16	5	2.62	170	89.01
+17	3	1.57	173	90.58
+19	4	2.09	177	92.67
+20	3	1.57	180	94.24
+21	1	0.52	181	94.76
+22	2	1.05	183	95.81
+25	1	0.52	184	96.34
+26	1	0.52	185	96.86
+27	1	0.52	186	97.38
+28	2	1.05	188	98.43
+30	1	0.52	189	98.95
+33	1	0.52	190	99.48
+36	1	0.52	191	100.00
+Frequency Missing = 22
+
+2004 Long term unemployment rate - %
+ltu2004	Frequency	Percent	Cumulative
+Frequency	Cumulative
+Percent
+.00	2	6.90	2	6.90
+.30	1	3.45	3	10.34
+.40	2	6.90	5	17.24
+.70	2	6.90	7	24.14
+1.0	1	3.45	8	27.59
+1.1	2	6.90	10	34.48
+1.2	2	6.90	12	41.38
+1.4	2	6.90	14	48.28
+1.5	2	6.90	16	55.17
+1.6	1	3.45	17	58.62
+2.0	1	3.45	18	62.07
+2.7	2	6.90	20	68.97
+3.5	1	3.45	21	72.41
+3.7	1	3.45	22	75.86
+3.8	2	6.90	24	82.76
+4.0	1	3.45	25	86.21
+4.3	1	3.45	26	89.66
+5.4	1	3.45	27	93.10
+5.6	1	3.45	28	96.55
+9.1	1	3.45	29	100.00
+Frequency Missing = 184
+
+2. Program code
+
+/*********************/
+/* Part 1 - get data */
+/*********************/
+LIBNAME mydata "/courses/d1406ae5ba27fe300 " access=readonly;
+
+/*************************************************/
+/* 1. get gapminder  data from  project  library */
+/* 2. format and add LABELs to  variables        */
+/* */
+data gap_data.gapminder;  /*save gapminder in permanent  library  gap_data */
+ set mydata.gapminder;
+ 
+ format suicideper100th 2.1;  /* formatting to  2 decimal points */
+ format employrate 3.;
+ 
+ label polityscore="Country Political Score"
+       suicideper100th="Suicide Rating Per 100,000 %"
+       employrate="Employment Rate %";
+run;
+/* sort data by  joined column -  country  */
+proc sort data=gap_data.gapminder; /* gapminder  sorted by  country */
+by country;
+run;
+
+/****************************/
+/* Part 2 - join/build data */
+/****************************/
+/***************************************************************/
+/* PROC SQL blocs to join/add variables from uploaded datasets */ 
+/***************************************************************/
+/* add tot_long_term_unemploy columns             */
+/* sort data by  joined column -  country first   */
+proc sort data=gap_data.tot_long_term_unemploy;
+by country;
+run;
+proc sql noprint;  /* join column data */
+create table gapminder_tmp01 as
+select a.*
+      ,b._2002 as ltu2002 
+      ,b._2004 as ltu2004
+   from  gap_data.gapminder                 a 
+         left join 
+         gap_data.tot_long_term_unemploy  b
+     on a.country = b.country
+   ;
+   quit;
+run;
+
+/* add f_long_term_unemploy columns               */
+/* sort data by  joined column -  country first   */
+proc sort data=gap_data.f_long_term_unemploy;
+by country;
+run;
+proc sql noprint;  /* join column data */
+create table gapminder_tmp02 as
+select a.*
+      ,b._2002 as fltu2002 
+      ,b._2004 as fltu2004
+   from  gapminder_tmp01                 a 
+         left join 
+         gap_data.f_long_term_unemploy  b
+     on a.country = b.country
+   ;
+   quit;
+run;
+
+/* add m_long_term_unemploy columns               */
+/* sort data by  joined column -  country first   */
+proc sort data=gap_data.m_long_term_unemploy;
+by country;
+run;
+proc sql noprint;  /* join column data */
+create table gapminder_tmp03 as
+select a.*
+      ,b._2002 as mltu2002 
+      ,b._2004 as mltu2004
+   from  gapminder_tmp02                 a 
+         left join 
+         gap_data.m_long_term_unemploy  b
+     on a.country = b.country
+   ;
+   quit;
+run;
+
+/* add suicides_total columns                    */
+/* sort data by  joined column -  country first  */
+proc sort data=gap_data.suicides_total;
+by country;
+run;
+proc sql noprint;  /* join column data */
+create table gapminder_tmp04 as
+select a.*
+      ,b.suicides2002
+      ,b.suicides2004
+   from  gapminder_tmp03  a 
+         left join 
+         gap_data.suicides_total                    b
+     on a.country = b.country
+   ;
+   quit;
+run;
+
+/* add suicides_female columns                    */
+/* sort data by  joined column -  country first   */
+proc sort data=gap_data.suicides_female;
+by country;
+run;
+
+proc sql noprint;  /* join column data */
+create table gapminder_tmp05 as
+select a.*
+      ,b._2002 as fsuicides2002
+      ,b._2004 as fsuicides2004
+   from  gapminder_tmp04  a 
+         left join 
+         gap_data.suicides_female                    b
+     on a.country = b.country
+   ;
+   quit;
+run;
+
+/* add suicides_male columns                      */
+/* sort data by  joined column -  country first   */
+proc sort data=gap_data.suicides_male;
+by country;
+run;
+proc sql noprint;  /* join column data */
+create table gapminder_combined as
+select a.*
+      ,b._2002 as msuicides2002
+      ,b._2004 as msuicides2004
+   from  gapminder_tmp05  a 
+         left join 
+         gap_data.suicides_male           b
+     on a.country = b.country
+   ;
+   quit;
+run;
+
+
+/**************************************/
+/* Part 3 - refine data,  build final */
+/**************************************/
+
+/**********************************************/
+/* 1. create final dataset gapminder_rsch and */
+/*    store it in permanent library gap_data  */
+/*    for futture reference in research       */
+/* 2. format, add lables to combined dataset  */
+/* 3. keep only columns needed for research   */
+data gap_data.gapminder_rsch (keep=country
+ 				incomeperperson
+ 				femaleemployrate
+ 				polityscore
+ 				suicideper100th
+ 				employrate
+ 				urbanrate
+ 				ltu2002
+ 				ltu2004
+ 				fltu2002
+ 				fltu2004
+ 				mltu2002
+ 				mltu2004
+ 				suicides2002
+ 				suicides2004
+ 				fsuicides2002
+ 				fsuicides2004
+ 				msuicides2002
+ 				msuicides2004
+ 			);
+set gapminder_combined;  /* temporary  dataset from WORK library */
+/* format data to more appropriate */
+format 	ltu2002   3.2 
+	ltu2004   3.2 
+       	fltu2002  3.2
+       	fltu2004  3.2
+       	mltu2002  3.2
+       	mltu2004  3.2
+       	fsuicides2002 3.2
+       	fsuicides2004 3.2
+       	msuicides2002 3.2
+       	msuicides2004 3.2
+      ;
+ /* add lables to  newly  added/created variable/columns */
+label 	ltu2002="2002 Long term unemployment rate - %"
+	ltu2004="2004 Long term unemployment rate - %"
+       	fltu2002="2002 female long term unemployment rate - %"
+       	fltu2004="2004 female long term unemployment rate - %"
+       	mltu2002="2002 male long term unemployment rate - %"
+       	mltu2004="2004 male long term unemployment rate - %"
+       	fsuicides2002="2002 female suicide rate - %"
+       	fsuicides2004="2004 female suicide rate - %"
+       	msuicides2002="2002 male suicide rate - %"
+       	msuicides2004="2004 male suicide rate - %"
+       	suicides2002="Total suicide deaths in 2002"
+       	suicides2004="Total suicide deaths in 2004"
+      ;
+run;
+
+/**************************************************/
+/* Part 4 - frequency  distribution  of some data */
+/**************************************************/
+/* perform  distribution analysis of variables in question */
+proc freq data=gap_data.gapminder_rsch;
+tables employrate suicideper100th ltu2004;
+run;
+
+/* display information about dataset and its variables */
+proc contents data=gap_data.gapminder_rsch;  
+run;
+/* print contents of gap_data.gapminder_rsch */
+proc print data=gap_data.gapminder_rsch;
+title "*** Contents of gap_data.gapminder_rsch ***";
+run;
+title;  /* initialize title to previous state */
+
+
