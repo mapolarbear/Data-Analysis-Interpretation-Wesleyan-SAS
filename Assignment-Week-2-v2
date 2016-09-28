@@ -5,7 +5,10 @@ Running Your First Program
 By mapolarbear@gmail.com
 
 
-First,  I would like to remind that for my research  I decided to  use GAPMINDER data set,  containing some indicators, but not all needed to  complete my  research. To build extended version with more data, I downloaded and uploaded into SAS Studio additional CSV data file and added needed variables to GAPMINDER. Data from following CSV files/datasets added for the purpose of my research using PROC SQL in Part-2 of program, don’t be scared.
+First,  I would like to remind that for my research  I decided to  use GAPMINDER data set,  containing some indicators, 
+but not all needed to  complete my  research. To build extended version with more data, I downloaded and uploaded into 
+SAS Studio additional CSV data file and added needed variables to GAPMINDER. Data from following CSV files/datasets added 
+for the purpose of my research using PROC SQL in Part-2 of program, don’t be scared.
 
 Here is brief description of code:
 Part-1	- Retrieve GAPMINDER form provided MYDATA course data
@@ -16,8 +19,11 @@ Part-4	- Execution of PROC FEQ to display frequencies for couple variables, incl
 Program code can also be found in TXT format at following link:
 https://github.com/mapolarbear/Data-Analysis-Interpretation-Wesleyan-SAS/blob/master/gapbuildDS.txt
 
-For verification purposes there are originally 213 countries in GAPMINDER dataset and if you add Cumulative Frequency to Missing Freq., you will get same 213, means nothing is skipped or removed. 
-In addition, based on my preliminary analysis of data I noticed that data is missing some countries, which means that my samples will be smaller than expected. I also noticed that some countries has higher suicideper100TH rating, it will be interesting to see if suicideper100TH correlates with employrate and long term  unemployment ratings for each category
+For verification purposes there are originally 213 countries in GAPMINDER dataset and if you add Cumulative Frequency 
+to Missing Freq., you will get same 213, means nothing is skipped or removed. 
+In addition, based on my preliminary analysis of data I noticed that data is missing some countries, which means that 
+my samples will be smaller than expected. I also noticed that some countries has higher suicideper100TH rating, 
+it will be interesting to see if suicideper100TH correlates with employrate and long term  unemployment ratings for each category
 
 1. Output of program
 
