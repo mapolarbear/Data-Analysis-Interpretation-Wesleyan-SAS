@@ -44,7 +44,6 @@ from &dsin                        /* if you have 5 groups, you'll have 5 MVs  */
 where &varEXPx IS NOT MISSING
 ;              
 quit;
-data _null_;
 
 %do j=1 %to &grpCNT;      /*put MV values in LOG to check if created*/
  %put mvEXPx&j;
