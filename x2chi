@@ -74,15 +74,3 @@ data _null_;
 /* Main loop - end                                                     */
 /***********************************************************************/
 %mend;
-
-/*proc contents data=work.tmp01; run;*/
-/*
-%x2chi(dsin=tmp01
-      ,varEXPx=employrate_f2004CAT
-      ,varCATy=fsuicidesAVG
-      );
-%x2chi(dsin=tmp01
-      ,varEXPx=femployrateAVG
-      ,varCATy=fsuicidesAVG
-      );
-*/
