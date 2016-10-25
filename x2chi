@@ -13,7 +13,7 @@ ooptions symbolgen syntaxcheck mlogic mprint;
  To run macro, insert following sample with your parmeter values 
  into  your open code program:
  
- %x2chi_2(dsin=yourlib.sasdataset
+ %x2chi(dsin=yourlib.sasdataset
       ,varEXPx=yourEXPLORATORY
       ,varCATy=yourCATEGORICAL
       );
