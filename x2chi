@@ -1,4 +1,4 @@
-ooptions symbolgen syntaxcheck mlogic mprint;
+options symbolgen syntaxcheck mlogic mprint;
 
 %macro x2chi(dsin=,varEXPx=,varCATy=);
 /******
